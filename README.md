@@ -7,14 +7,14 @@ A dynamic array implemented in C.
 A dynamic array is a memory allocation that can hold values and expand, if the number of values that need to fit into the array exceeds the array capacity. So, it fixes the problems a static array has, which is that once the numbers needing to be inputed into the array exceeds its capacity, then a new array needs to be created with more memory slots and all the data needs to be transferred. None of this happens automatically.
 
 ## API / Functions
-`dynarray *create(int capacity);` 
-- creates an array of size "capacity"
-`void push(dynarray *arr, int value);`
-- pushes an integer "value" into the next available open slot in the array. To do so, the function bounds checks count and capacity before pushing the value. If no more memory slots are available, then the function doubles the array capacity.
-`int get(dynarray *arr, int index);` 
-- finds the value at the "index" slot in the array
-`void free_array(dynarray *arr);`
-- frees up both the memory allocated to the array and to the pointer struct of the array
+- `dynarray *create(int capacity);` 
+    - creates an array of size "capacity"
+- `void push(dynarray *arr, int value);`
+    - pushes an integer "value" into the next available open slot in the array. To do so, the function bounds checks count and capacity before pushing the value. If no more memory slots are available, then the function doubles the array capacity.
+- `int get(dynarray *arr, int index);` 
+    - finds the value at the "index" slot in the array
+- `void free_array(dynarray *arr);`
+    - frees up both the memory allocated to the array and to the pointer struct of the array
 
 ## Design Decisions
 At this stage, I wasn't making any design decisions, since it's so early in the learning process but there were two more involved parts to the code. 
